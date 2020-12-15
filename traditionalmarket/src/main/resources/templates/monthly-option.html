@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월별 가격 현황</title>
+    <link rel="stylesheet" type="text/css" href="/css/monthly.css">
+    <link rel="stylesheet" type="text/css" href="/css/monthlyOption.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <div class="innerHeader">
+                <li id="mainPage"><a href="/index">지역시장지킴이</a></li>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="/info">전국 지역시장</a></li>
+                        <li><a href="/index">이달의 상품</a></li>
+                        <li><a href="/map">지도 검색</a></li>
+                        <li><a href="/monthly">월별 가격 현황</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- section.monthly -->
+        <section class="monthly">
+
+            <div class="title">
+                <h2 class="en">전국 <span id="ITEMNAME" th:text="${keyword}">사과</span> 가격 통계</h2>
+                <p>전국의 가격 변동 통계를 한눈에 확인하세요.</p>
+            </div>
+            <div class="monthContainer">
+                <div class="container">
+                    <div class="priceBox">
+                        <div class="productClass">
+                            <h2 class="en">품목</h2>
+                        </div>
+                        <div class="avg">
+                            <span><span id="avgTitle">11월 </span>평균가 : <span id="AVG_PRICE"
+                                    th:text="${changeEleven}">10000</span>원</span>
+                        </div>
+                        <div class="avg">
+                            <span><span id="weightTitle">무게 :</span>
+                                <span id="AVG_PRICE" th:text="${circUnit + circUnitSize}">50</span></span>
+                        </div>
+                    </div>
+                    <div class="graphBox">
+                        <div class="title">
+                            <p class="en">월별 현황<span> (2019년 11월 말 기준)</span></p>
+                        </div>
+                        <div class="graph">
+                            <canvas id="myChartAvg" style="position: absolute; width: 100%; height: 60%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar-chrtContainer">
+                    <div class="bar-title">월별 최대 · 최소값 통계<span> (2019년 11월 말 기준)</span></div>
+
+                    <div class="bar-chrtBox">
+                        <div class="chrt">
+                            <canvas id="barChartMax" style="position: relative; width: 100%; height: 240px;"></canvas>
+
+                            <canvas id="barChartMin"
+                                style="position: relative; width: 100%; height: 240px; margin-top: 2%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="inner">
+                <ul class="list">
+                    <li><a href="https://www.garak.co.kr/" target="_blank">가락시장</a></li>
+                    <li><a href="http://www.kyungdongmart.com/index/index.htm" target="_blank">경동시장</a></li>
+                    <li><a href="http://jbsj.kr/?m_code=jjnm" target="_blank">남부시장</a></li>
+                    <li><a href="https://bjmarket.business.site/" target="_blank">부전시장</a></li>
+                    <li><a href="http://www.daekkiri.com/main.html" target="_blank">상남시장</a></li>
+                    <li><a href="http://www.nightseomun.com/html/index.php" target="_blank">서문시장</a></li>
+                    <li><a href="https://www.facebook.com/sinjungmarket1234/" target="_blank">신정시장</a></li>
+                    <li><a href="https://yangdongmarket.modoo.at/" target="_blank">양동시장</a></li>
+                    <li><a href="https://www.busan.go.kr/egmarket/index" target="_blank">엄궁도매시장</a></li>
+                    <li><a href="http://www.ydpmarket.com/" target="_blank">영등포시장</a></li>
+                    <li><a href="https://www.daejeon.go.kr/ohj/index.do" target="_blank">오정도매시장</a></li>
+                    <li><a href="http://jukdosijang.kr/" target="_blank">죽도시장</a></li>
+                    <li><a href="http://jungbusijang.co.kr/" target="_blank">중부시장</a></li>
+                    <li><a href="http://www.xn--vk1bu41auzbi7crn75c.kr/" target="_blank">중앙시장</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <!-- 1월 ~ 11월 평균값-->
+    <div type="hidden" class="jan" th:value="${one}" value="1000"></div>
+    <div type="hidden" class="feb" th:value="${two}" value="2022"></div>
+    <div type="hidden" class="mar" th:value="${three}" value="3120"></div>
+    <div type="hidden" class="apr" th:value="${four}" value="4000"></div>
+    <div type="hidden" class="may" th:value="${five}" value="5532"></div>
+    <div type="hidden" class="jun" th:value="${six}" value="6012"></div>
+    <div type="hidden" class="jul" th:value="${seven}" value="7007"></div>
+    <div type="hidden" class="aug" th:value="${eight}" value="8989"></div>
+    <div type="hidden" class="sep" th:value="${nine}" value="9787"></div>
+    <div type="hidden" class="oct" th:value="${ten}" value="10000"></div>
+    <div type="hidden" class="nov" th:value="${eleven}" value="7113"></div>
+
+    <!-- 1월 ~ 11월 최대값-->
+    <div type="hidden" class="janX" th:value="${oneMax}" value="1000"></div>
+    <div type="hidden" class="febX" th:value="${twoMax}" value="2022"></div>
+    <div type="hidden" class="marX" th:value="${threeMax}" value="3120"></div>
+    <div type="hidden" class="aprX" th:value="${fourMax}" value="4000"></div>
+    <div type="hidden" class="mayX" th:value="${fiveMax}" value="5532"></div>
+    <div type="hidden" class="junX" th:value="${sixMax}" value="6012"></div>
+    <div type="hidden" class="julX" th:value="${sevenMax}" value="7007"></div>
+    <div type="hidden" class="augX" th:value="${eightMax}" value="8989"></div>
+    <div type="hidden" class="sepX" th:value="${nineMax}" value="9787"></div>
+    <div type="hidden" class="octX" th:value="${tenMax}" value="10000"></div>
+    <div type="hidden" class="novX" th:value="${elevenMax}" value="7113"></div>
+
+    <!-- 1월 ~ 11월 최소값-->
+    <div type="hidden" class="janM" th:value="${oneMin}" value="1000"></div>
+    <div type="hidden" class="febM" th:value="${twoMin}" value="2022"></div>
+    <div type="hidden" class="marM" th:value="${threeMin}" value="3120"></div>
+    <div type="hidden" class="aprM" th:value="${fourMin}" value="4000"></div>
+    <div type="hidden" class="mayM" th:value="${fiveMin}" value="5532"></div>
+    <div type="hidden" class="junM" th:value="${sixMin}" value="6012"></div>
+    <div type="hidden" class="julM" th:value="${sevenMin}" value="7007"></div>
+    <div type="hidden" class="augM" th:value="${eightMin}" value="8989"></div>
+    <div type="hidden" class="sepM" th:value="${nineMin}" value="9787"></div>
+    <div type="hidden" class="octM" th:value="${tenMin}" value="10000"></div>
+    <div type="hidden" class="novM" th:value="${elevenMin}" value="7113"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="/js/monthly.js"></script>
+    <script type="text/javascript" src="/js/monthly-bar.js"></script>
+
+</body>
+
+</html>

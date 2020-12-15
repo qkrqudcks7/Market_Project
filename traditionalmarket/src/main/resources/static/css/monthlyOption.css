@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* UTF-8 */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+/* @font-face { font-family: 'Wolin'; src: url(../fonts/Wolin.TTF) format('truetype'); } */
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+
+.en {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.mo {
+    display: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+
+/* seciton.title */
+
+section .title {
+    color: #000;
+    text-align: center;
+}
+
+section .title h2 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+section .title h2 span {
+    color: rgb(4, 130, 198);
+}
+
+section .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* section.monthly */
+
+section.monthly {
+    margin: 10% auto;
+    height: 100vh;
+    position: relative;
+}
+
+section.monthly .monthContainer {
+    width: 80%;
+    height: 80vh;
+    margin: 3% auto;
+    position: relative;
+    border-radius: 20px;
+}
+
+section.monthly .monthContainer .container {
+    width: 90%;
+    height: 45%;
+    background: #f5f5f5;
+    border: 1px solid #5a6674;
+    border-radius: 20px;
+    margin: 2.2% auto;
+}
+
+section.monthly .monthContainer .container .priceBox {
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+section.monthly .monthContainer .container .priceBox .productClass {
+    width: 80%;
+    height: 20%;
+    line-height: 2.5;
+    border-bottom: 1px solid #5a6674;
+    margin-bottom: 3%;
+    margin-left: 10%;
+}
+
+section.monthly .monthContainer .container .priceBox .productClass > h2 {
+    font-size: 25px;
+}
+
+/* .avg */
+
+section.monthly .monthContainer .container .priceBox .avg {
+    width: 80%;
+    height: 20%;
+    padding: 10px 10px;
+    background: #fff;
+    font-size: 20px;
+    line-height: 3;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px;
+    margin: 0 22px;
+    margin-top: 5%;
+}
+
+section.monthly .monthContainer .container .priceBox .avg #avgTitle {
+    color: rgb(4, 130, 198);
+}
+
+section.monthly .monthContainer .container .priceBox .avg #AVG_PRICE {
+    color: rgb(4, 130, 198);
+
+}
+
+/* graph */
+
+section.monthly .monthContainer .container .graphBox {
+    width: 70%;
+    height: 98%;
+    float: right;
+    text-align: center;
+}
+
+section.monthly .monthContainer .container .graphBox .title {
+    width: 80%;
+    height: 20%;
+    margin: 1px auto;
+    line-height: 3;
+    border-bottom: 1px solid #555;
+    font-weight: bold;
+}
+
+section.monthly .monthContainer .container .graphBox .title > p {
+    float: left;
+    font-size: 20px;
+    color: rgb(4, 130, 198);
+}
+
+section.monthly .monthContainer .container .graphBox .title > p > span {
+    font-size: 13px;
+    color: #555;
+}
+
+section.monthly .monthContainer .container .graphBox .graph  {
+    width: 80%;
+    height: 72%;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #5a6674;
+}
+
+/* Bar Chart */
+
+section.monthly .monthContainer .bar-chrtContainer {
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background: #f5f5f5;
+    border: 1px solid #5a6674;
+    border-radius: 20px;
+}
+
+section.monthly .monthContainer .bar-chrtContainer .bar-title {
+    width: 80%;
+    height: auto;
+    margin: 1px auto;
+    line-height: 3;
+    border-bottom: 1px solid #555;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+section.monthly .monthContainer .bar-chrtContainer .bar-title > span {
+    font-size: 13px;
+    color: #555;
+}
+
+section.monthly .monthContainer .bar-chrtContainer .bar-chrtBox {
+    padding: 50px 50px 50px 20px;
+}
+
+section.monthly .monthContainer .bar-chrtContainer .bar-chrtBox .chrt {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 50px 50px 50px;
+}
+
+
+/* footer */
+
+footer {
+    clear: both;
+    padding: 30px 20px 50px;
+    background: #fff;
+    margin-top: 20%;
+}
+
+footer .inner {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85%;
+    border-top: 1px solid #ddd;
+}
+
+footer .inner .list {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+}
+
+footer .inner .list li {
+    float: left;
+    margin: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .inner .list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+footer .inner .list li a:hover, footer .inner .list li a:focus {
+    color: rgb(4, 130, 198);
+}

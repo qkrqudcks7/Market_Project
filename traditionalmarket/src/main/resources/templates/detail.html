@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세보기</title>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" type="text/css" href="/css/detail.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <div class="innerHeader">
+                <li id="mainPage"><a href="/index">지역시장지킴이</a></li>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="/info">전국 지역시장</a></li>
+                        <li><a href="/index">이달의 상품</a></li>
+                        <li><a href="/map">지도 검색</a></li>
+                        <li><a href="/monthly">월별 가격 현황</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <section class="detail">
+            <div class="view">
+                <div class="info-view">
+                    <div class="market-info"><span id="county" th:text="${main.countryName}">청주</span>
+                        <span id="market" th:text="${main.marketName}">육거리</span> 시장</div>
+                    <div class="item-list">
+                        <div class="info-item">상품이름<div class="item" id="itemName" th:text="${main.itemName}">감귤
+                            </div>
+                        </div>
+                        <div class="info-item">품종<div class="item" id="kindName" th:text="${main.kindName}">국산</div>
+                        </div>
+                        <div class="info-item">가격<div class="item" id="price" th:text="${main.price}">2070원</div>
+                        </div>
+                        <div class="info-item">품질<div class="item" id="productRank" th:text="${main.productRank}">S과
+                            </div>
+                        </div>
+                        <div class="info-item">도소매<div class="item" id="productClsName"
+                                th:text="${main.productClsName}">소매</div>
+                        </div>
+                        <div class="info-item">묶음(소매)<div class="item" id="retailSaleUnit"
+                                th:text="${main.retailSaleUnit + main.retailSaleUnitSize}">5</div>
+                        </div>
+                        <div th:if="${main.wholeSaleUnit != null && main.wholeSaleUnitSize != null}">
+                            <div class="info-item">묶음(도매)<div class="item" id="wholeSaleUnit"
+                                    th:text="${main.wholeSaleUnit + main.wholeSaleUnitSize}">20</div>
+                            </div>
+                        </div>
+                        <div class="info-item">일자<div class="item" id="day">2019-11-08</div>
+                        </div>
+                    </div>
+                    <div class="map-view">
+                        <div class="kakako-map" id="map" th:value="${main.marketName}"></div>
+                        <div type="hidden" id="country" th:value="${main.countryName}"></div>
+                    </div>
+                    <div class="graph-sector">
+                        <div class="graph">
+                            <canvas id="myChart" style="position: absolute; width: 100%; height: 300px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="inner">
+                <ul class="list">
+                    <li><a href="https://www.garak.co.kr/" target="_blank">가락시장</a></li>
+                    <li><a href="http://www.kyungdongmart.com/index/index.htm" target="_blank">경동시장</a></li>
+                    <li><a href="http://jbsj.kr/?m_code=jjnm" target="_blank">남부시장</a></li>
+                    <li><a href="https://bjmarket.business.site/" target="_blank">부전시장</a></li>
+                    <li><a href="http://www.daekkiri.com/main.html" target="_blank">상남시장</a></li>
+                    <li><a href="http://www.nightseomun.com/html/index.php" target="_blank">서문시장</a></li>
+                    <li><a href="https://www.facebook.com/sinjungmarket1234/" target="_blank">신정시장</a></li>
+                    <li><a href="https://yangdongmarket.modoo.at/" target="_blank">양동시장</a></li>
+                    <li><a href="https://www.busan.go.kr/egmarket/index" target="_blank">엄궁도매시장</a></li>
+                    <li><a href="http://www.ydpmarket.com/" target="_blank">영등포시장</a></li>
+                    <li><a href="https://www.`eon.go.kr/ohj/index.do" target="_blank">오정도매시장</a></li>
+                    <li><a href="http://jukdosijang.kr/" target="_blank">죽도시장</a></li>
+                    <li><a href="http://jungbusijang.co.kr/" target="_blank">중부시장</a></li>
+                    <li><a href="http://www.xn--vk1bu41auzbi7crn75c.kr/" target="_blank">중앙시장</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!--1월부터 11월 평균값-->
+        <div type="hidden" class="jan" th:value="${one}" value="one"></div>
+        <!-- <div type="hidden" class="jan" th:text="${one}" value="one"></div> -->
+        <div type="hidden" class="feb" th:value="${two}" value="two"></div>
+        <!-- <div type="hidden" class="mar" th:text="${three}" th:value="${three}"></div> -->
+        <div type="hidden" class="mar" th:value="${three}" value="three"></div>
+        <!-- <div type="hidden" class="apr" th:text="${four}" th:value="${four}"></div> -->
+        <div type="hidden" class="apr" th:value="${four}" value="four"></div>
+        <!-- <div type="hidden" class="may" th:text="${five}" th:value="${five}"></div> -->
+        <div type="hidden" class="may" th:value="${five}" value="five"></div>
+        <!-- <div type="hidden" class="jun" th:text="${six}" th:value="${six}"></div> -->
+        <div type="hidden" class="jun" th:value="${six}" value="jun"></div>
+        <!-- <div type="hidden" class="jul" th:text="${seven}" th:value="${seven}"></div> -->
+        <div type="hidden" class="jul" th:value="${seven}" value="jul"></div>
+        <!-- <div type="hidden" class="aug" th:text="${eight}" th:value="${eight}"></div> -->
+        <div type="hidden" class="aug" th:value="${eight}" value="aug"></div>
+        <!-- <div type="hidden" class="sep" th:text="${nine}" th:value="${nine}"></div> -->
+        <div type="hidden" class="sep" th:value="${nine}" value="sep"></div>
+        <!-- <div type="hidden" class="oct" th:text="${ten}" th:value="${ten}"></div> -->
+        <div type="hidden" class="oct" th:value="${ten}" value="oct"></div>
+        <!-- <div type="hidden" class="nov" th:text="${eleven}" th:value="${eleven}"></div> -->
+        <div type="hidden" class="nov" th:value="${eleven}" value="nov"></div>
+
+
+    </div>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=abe954ba1f7bbc97c3bc32366c22e89b"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/js/location.js"></script>
+    <script type="text/javascript" src="/js/chart.js"></script>
+</body>
+
+</html>

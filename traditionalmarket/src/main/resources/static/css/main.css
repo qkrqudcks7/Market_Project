@@ -1,0 +1,502 @@
+@charset "utf-8";
+/* UTF-8 */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+
+.en {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.mo {
+    display: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 100px;
+    z-index: 200;
+}
+
+.innerHeader {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+}
+
+.innerHeader #mainPage > a {
+    font-family: 'Jeju Hallasan', serif;
+    font-size: 30px;
+    color: #fff;
+    width: 20%;
+    float: left;
+    text-decoration: none;
+}
+
+.innerHeader #mainPage > a:hover, .innerHeader #mainPage > a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.innerHeader .gnb {
+    width: 50%;
+    float: right;
+    margin-left: 80px;
+}
+
+.innerHeader .gnb ul {
+    width: 100%;
+}
+
+.innerHeader .gnb li {
+    float: right;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.innerHeader .gnb li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Noto Sans KR', serif;
+}
+
+.innerHeader .gnb li a:hover, .innerHeader .gnb li a:focus {
+    color: rgb(4, 130, 198);
+    text-decoration: none;
+}
+
+/* seciton.title */
+section .title {
+    color: #000;
+    text-align: center;
+}
+
+section .title h2 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+section .title h2 span {
+    color: rgb(4, 130, 198);
+}
+
+section .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* section.main */
+section.main {
+    width: 100%;
+    height: 100vh;
+    background: url(/img/main.png) no-repeat center/cover;
+    position: relative;
+    background-attachment: fixed;
+    margin: 0 auto;
+}
+
+section.main .mainTitle {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    animation-name: mainTitle;
+    animation-duration: 1s;
+    font-family: 'Jeju Hallasan', serif;
+}
+
+/* section.main animation */
+@keyframes mainTitle {
+    0% {opacity: 0; top: 50%;}
+    30% {opacity: 0; top: 40%;}
+    100% {opacity: 1; top: 29%;}
+}
+
+section.main .mainTitle h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    /* font-family: 'YunTaemin'; */
+}
+
+section.main .mainTitle p {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* search-form */
+
+.search-form {
+    position: relative;
+    margin-top: 10%;
+    left: 50%;
+    width: 350px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-form .focus {
+      box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 38px;
+    font-size: 14px;
+    background: none;
+    color: #5a6674;
+    width: 85%;
+    height: 20px;
+    border: none;
+    appearance: none;
+    outline: none;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder {
+    text-align: center;
+ }
+
+.search-input::-webkit-search-cancel-button {
+      appearance: none;
+}
+  
+.search-button {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: none!important;
+    cursor: pointer;
+}
+
+.search-button svg {
+      width: 20px;
+      height: 20px;
+      fill: #5a6674;
+}
+
+/* section.about */
+
+section.about {
+    background: #fff;
+    padding: 80px 0;
+}
+
+section.about ul {
+    margin: 30px auto;
+    width: 85%;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+section.about ul li {
+    float: left;
+    width: 33.333%;
+}
+
+section.about ul li .introduce {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.about ul li p.img {
+    width: 100%;
+    overflow: hidden;
+}
+
+section.about ul li p.img img {
+    width: 90%;
+    height: 250px;
+    transition: all 0.8s;
+}
+
+section.about ul li:hover p.img img, section.about ul li:focus p.img img {
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+section ul li .text {
+    width: 90%;
+    margin-top: 5%;
+}
+
+section ul li .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+
+section ul li .text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* section.services */
+section.services {
+    margin-bottom: 150px;
+    overflow: hidden;
+    background: rgb(239, 238, 244);
+}
+
+section.services .inner {
+    display: block;
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    float: left;
+}
+
+section.services .inner h3 {
+    padding: 25px 45px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+section.services .inner h3 span {
+    color: rgb(4, 130, 198);
+}
+
+/*section.recommendation*/
+
+section.recommendation {
+    margin-bottom: 60px;
+}
+
+section.recommendation #month {
+    color: rgb(4, 130, 198, 0.7);
+    font-weight: bold;
+}
+
+section.recommendation ul {
+    width: 85%; 
+    margin: 50px auto; 
+    overflow: hidden;
+}
+
+section.recommendation ul li {
+    float: left; 
+    width: 32%; 
+    height: 50%;
+    margin-right: 1%;
+}
+
+section.recommendation ul li:nth-child(4),
+section.recommendation ul li:nth-child(5),
+section.recommendation ul li:nth-child(6) {
+    margin-top: 5%;
+}
+
+section.recommendation ul li:last-child {
+    margin-right: 0;
+}
+
+section.recommendation ul li a {
+    display: block; 
+    width: 100%; 
+    height: 100%;
+}
+
+section.recommendation ul li a p.img {
+    overflow: hidden; 
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+}
+
+section.recommendation ul li a p.img:before {
+    content: ''; 
+    width: 0%; 
+    height: 100%; 
+    position: absolute; 
+    left: 0; 
+    top:0; 
+    background: rgb(4, 130, 198, 0.7);
+    transition: all 0.6s;
+}
+
+section.recommendation ul li a p.img img {
+    width: 100%;
+    height: 350px;
+}
+
+section.recommendation ul li a:hover p.img:before {
+    width: 100%; 
+    transition: all 0.6s;
+}
+
+section.recommendation ul li a p.img:after {
+    content: '더 알아보기'; 
+    position: absolute; 
+    left:50%; 
+    top:50%; 
+    transform: translate(-50%,-50%); 
+    font-size: 20px; 
+    color: #fff; 
+    border: 1px solid #fff; 
+    border-radius: 40px; 
+    padding: 5px 30px; 
+    opacity: 0; 
+    transition: all 0.5s;
+}
+
+section.recommendation ul li a:hover p.img:after {
+    opacity: 1; 
+    transition: all 0.5s;
+}
+
+section.recommendation ul li a .bottom {
+    width: 100%; 
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+section.recommendation ul li a .bottom p.color {
+    color: rgb(4, 130, 198);
+    font-size: 25px; 
+    font-weight: normal;
+}
+
+section.recommendation ul li a .bottom p {
+    font-size: 20px;
+}
+
+/* footer */
+footer {
+    clear: both;
+    padding: 30px 20px 50px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+footer .inner {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85%;
+    border-top: 1px solid #ddd;
+}
+
+footer .inner .list {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+}
+
+footer .inner .list li {
+    float: left;
+    margin: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .inner .list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+footer .inner .list li a:hover, footer .inner .list li a:focus {
+    color: rgb(4, 130, 198);
+}

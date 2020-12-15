@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지도 검색</title>
+    <link rel="stylesheet" type="text/css" href="/css/map.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <div class="innerHeader">
+                <li id="mainPage"><a href="/index">지역시장지킴이</a></li>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="/info">전국 지역시장</a></li>
+                        <li><a href="/index">이달의 상품</a></li>
+                        <li><a href="/map">지도 검색</a></li>
+                        <li><a href="/monthly">월별 가격 현황</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- section.location -->
+        <section class="location">
+            <div class="title">
+                <h2 class="en">지역을 선택해주세요 <span>.</span></h2>
+                <p>전국의 공영 도매시장이 여러분을 기다리고 있습니다.</p>
+            </div>
+            <div class="mapContainer">
+                <nav class="map">
+                    <div class="select">
+                        <div id="map" class="south-korea">
+                            <!-- Raphaël JS 지도 위치 -->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <!-- //section.location -->
+
+        <!-- footer -->
+        <footer>
+            <div class="inner">
+                <ul class="list">
+                    <li><a href="https://www.garak.co.kr/" target="_blank">가락시장</a></li>
+                    <li><a href="http://www.kyungdongmart.com/index/index.htm" target="_blank">경동시장</a></li>
+                    <li><a href="http://jbsj.kr/?m_code=jjnm" target="_blank">남부시장</a></li>
+                    <li><a href="https://bjmarket.business.site/" target="_blank">부전시장</a></li>
+                    <li><a href="http://www.daekkiri.com/main.html" target="_blank">상남시장</a></li>
+                    <li><a href="http://www.nightseomun.com/html/index.php" target="_blank">서문시장</a></li>
+                    <li><a href="https://www.facebook.com/sinjungmarket1234/" target="_blank">신정시장</a></li>
+                    <li><a href="https://yangdongmarket.modoo.at/" target="_blank">양동시장</a></li>
+                    <li><a href="https://www.busan.go.kr/egmarket/index" target="_blank">엄궁도매시장</a></li>
+                    <li><a href="http://www.ydpmarket.com/" target="_blank">영등포시장</a></li>
+                    <li><a href="https://www.daejeon.go.kr/ohj/index.do" target="_blank">오정도매시장</a></li>
+                    <li><a href="http://jukdosijang.kr/" target="_blank">죽도시장</a></li>
+                    <li><a href="http://jungbusijang.co.kr/" target="_blank">중부시장</a></li>
+                    <li><a href="http://www.xn--vk1bu41auzbi7crn75c.kr/" target="_blank">중앙시장</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <script src="/js/raphael-min.js"></script>
+    <script src="/js/map.js"></script>
+</body>
+
+</html>

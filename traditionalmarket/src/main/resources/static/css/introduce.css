@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* UTF-8 */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+
+.en {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.mo {
+    display: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 100px;
+    z-index: 200;
+}
+
+.innerHeader {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+}
+
+.innerHeader #mainPage > a {
+    font-family: 'Jeju Hallasan', serif;
+    font-size: 30px;
+    color: #fff;
+    width: 20%;
+    float: left;
+    text-decoration: none;
+}
+
+.innerHeader #mainPage > a:hover, .innerHeader #mainPage > a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.innerHeader .gnb {
+    width: 50%;
+    float: right;
+    margin-left: 80px;
+}
+
+.innerHeader .gnb ul {
+    width: 100%;
+}
+
+.innerHeader .gnb li {
+    float: right;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.innerHeader .gnb li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Noto Sans KR', serif;
+}
+
+.innerHeader .gnb li a:hover, .innerHeader .gnb li a:focus {
+    color: rgb(4, 130, 198);
+    text-decoration: none;
+}
+
+/* section.introduce */
+section.introduce {
+    margin: 10% auto;
+    height: auto;
+    position: relative;
+}
+
+section.introduce .market-list {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+section.introduce .market-list .market {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 60px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+section.introduce .market-list .market .market-name {
+    width: 90%;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%, -50%);
+    float: left;
+    margin-top: 1%;
+    margin-bottom: 35px;
+    margin-left: 3.5%;
+    font-size: 40px;
+}
+
+section.introduce .market-list .market .market-name #marketName {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+
+section.introduce .market-list .market .market-name #marketName > span {
+    color: rgb(4, 130, 198);
+}
+
+section.introduce .market-list .market .market-img {
+    width: 37%;
+    height: 55%;
+    /* background: url(../img/main.png) no-repeat center/cover; */
+    border-radius: 20px;
+    float: left;
+    position: absolute;
+    margin-top: 10%;
+}
+
+section.introduce .market-list .market .market-info-list {
+    width: 60%;
+    height: auto;
+    float: right;
+    margin-top: 4%;
+}
+
+section.introduce .market-list .market .market-info-list .info {
+    width: 100%;
+    float: left;
+    margin: 30px 20px;
+    text-align: left;
+}
+
+section.introduce .market-list .market .market-info-list .info > i {
+    width: 12%;
+    height: auto;
+    float: left;
+}
+
+section.introduce .market-list .market .market-info-list .info .item {
+    width: 85%;
+    height: auto;
+    float: left;
+    font-size: 29px;
+    color: rgb(85, 85, 85);
+}
+
+/* footer */
+footer {
+    clear: both;
+    padding: 30px 20px 50px;
+    background: #fff;
+}
+
+footer .inner {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85%;
+    border-top: 1px solid #ddd;
+}
+
+footer .inner .list {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+}
+
+footer .inner .list li {
+    float: left;
+    margin: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .inner .list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+footer .inner .list li a:hover, footer .inner .list li a:focus {
+    color: rgb(4, 130, 198);
+}

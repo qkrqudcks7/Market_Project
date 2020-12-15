@@ -1,0 +1,364 @@
+@charset "utf-8";
+/* UTF-8 */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+
+.en {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.mo {
+    display: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 100px;
+    z-index: 200;
+}
+
+.innerHeader {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+}
+
+.innerHeader #mainPage > a {
+    font-family: 'Jeju Hallasan', serif;
+    font-size: 30px;
+    color: #fff;
+    width: 20%;
+    float: left;
+    text-decoration: none;
+}
+
+.innerHeader #mainPage > a:hover, .innerHeader #mainPage > a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.innerHeader .gnb {
+    width: 50%;
+    float: right;
+    margin-left: 80px;
+}
+
+.innerHeader .gnb ul {
+    width: 100%;
+}
+
+.innerHeader .gnb li {
+    float: right;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.innerHeader .gnb li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Noto Sans KR', serif;
+}
+
+.innerHeader .gnb li a:hover, .innerHeader .gnb li a:focus {
+    color: rgb(4, 130, 198);
+    text-decoration: none;
+}
+
+/* section.monthly */
+
+section.monthly {
+    margin: 10% auto;
+    height: auto;
+}
+/* search-form */
+
+.search-form {
+    position: relative;
+    margin-top: 5%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+.search-form .focus {
+      box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    background: none;
+    color: #5a6674;
+    width: 100%;
+    height: 20px;
+    border: none;
+    appearance: none;
+    outline: none;
+    text-align: center;
+    left: 0.7%;
+}
+
+.search-input::-webkit-search-cancel-button {
+      appearance: none;
+}
+  
+.search-button {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: none!important;
+    cursor: pointer;
+}
+
+.search-button svg {
+      width: 20px;
+      height: 20px;
+      fill: #5a6674;
+}
+
+/* seciton.title */
+
+section .title {
+    color: #000;
+    text-align: center;
+}
+
+section .title h2 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+section .title h2 span {
+    color: rgb(4, 130, 198);
+}
+
+section .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* .info */
+
+section.monthly .info {
+    margin: 50px auto;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+section.monthly .info .info-card {
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+    height: 350px;
+    border: 1px solid #5a6674;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px;
+    margin: 0 auto;
+}
+
+
+section.monthly .info .info-card .name,  section.monthly .info .info-card .kind{
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%, -50%);
+    float: left;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+section.monthly .info .info-card .name {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    border-bottom: 1px solid #5a6674;
+    line-height: 3;
+    margin-top: 1%;
+}
+
+section.monthly .info .info-card .name > span {
+    font-size: 30px;
+}
+
+section.monthly .info .info-card .kind {
+    background: #3a3c4e;
+    color: #fff;
+    border: 1px solid #5a6674;
+    border-radius: 10px;
+    width: 26%;
+    height: 29%;
+}
+
+section.monthly .info .info-card .kind .kd {
+    width: 100%;
+    height: 50%;
+    color: #000;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+section.monthly .info .info-card .btn-detail > a {
+    width: 50%;
+    height: 70px;
+    margin-top: 5%;
+    margin-left: 25%;
+    background: rgb(4, 130, 198);    
+    border-radius: 10px;
+    box-sizing: border-box;
+    float: left;
+    color: #fff;
+    font-size: 20px;
+    line-height: 3.5;
+}
+
+section.monthly .info .info-card .btn-detail > a:hover{
+    background: rgb(45, 163, 226);
+}
+
+section.monthly .info .info-card .btn-detail > a:active {
+    background: rgb(4, 130, 198);  
+}
+section.monthly .info .info-card .btn-detail > a > p {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+
+footer {
+    clear: both;
+    padding: 30px 20px 50px;
+    background: #fff;
+}
+
+footer .inner {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 85%;
+    border-top: 1px solid #ddd;
+}
+
+footer .inner .list {
+    font-family: 'Exo 2', sans-serif;
+    margin-top: 10px;
+}
+
+footer .inner .list li {
+    float: left;
+    margin: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .inner .list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+footer .inner .list li a:hover, footer .inner .list li a:focus {
+    color: rgb(4, 130, 198);
+}

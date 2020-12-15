@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* UTF-8 */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+/* @font-face { font-family: 'Wolin'; src: url(../fonts/Wolin.TTF) format('truetype'); } */
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+address, em, i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+
+.en {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.mo {
+    display: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+/* select */
+
+ul.option {
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+ul.option  li {
+    padding: 30px 5px;
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul.option li > span {
+    margin: auto 30px;
+    font-size: 30px;
+}
+
+ul.option label {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    padding-left: 15%;
+}
+    
+ul.option label input {
+    display: none;
+}
+    
+ul.option label span {
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 120px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    line-height: 3;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    left: 14%;
+    top: 50%;
+    margin-top: -7.5px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+    
+ul.option input:checked+span{
+    color: #fff;
+    background: rgb(4, 130, 198);
+    border-color: rgb(4, 130, 198);
+    transition: all 0.5s;
+}
+
+ul.option #sbt {
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 120px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    line-height: 3;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+    left: 47%;
+    outline: none;
+}
+
+ul.option #sbt:hover {
+    color: #fff;
+    background: rgb(4, 130, 198);
+    border-color: rgb(4, 130, 198);
+    transition: all 0.5s;
+    outline: none;
+}
+
+ul.option #sbt:active {
+    color: #fff;
+    background: rgb(0, 52, 150);
+    border-color: rgb(0, 52, 150);
+    transition: all 0.1s;
+    outline: none;
+}
+
+ul.option button:hover {
+    color: #fff;
+    background: rgb(4, 130, 198);
+    border-color: rgb(4, 130, 198);
+    transition: all 0.5s;
+}
