@@ -4,6 +4,8 @@
 
 
 ## 프로젝트 설명
+![image](https://user-images.githubusercontent.com/66015002/107529421-32053780-6bfe-11eb-9760-e12da061be2a.png)
+
 
 한국농수산식품유통공사에서 제공받은 농식품 유통 빅데이터를 기반으로 제작.
 
@@ -63,6 +65,7 @@ spring:
  
  
  ### 3.1. 카테고리별 검색(Spring Data Jpa , Query Dsl)
+![image](https://user-images.githubusercontent.com/66015002/107529789-96c09200-6bfe-11eb-9179-c0a4fe2a1d40.png)
  
  <pre>
 <code>
@@ -126,6 +129,8 @@ JPQLQuery<Main> query = from(main2).where(main2.day.eq(20191108)
  <hr/>
  
 ### 3.2. 3중 필터링 정렬 검색
+ ![image](https://user-images.githubusercontent.com/66015002/107529564-55c87d80-6bfe-11eb-98ec-71a278a51e6e.png)
+ ![image](https://user-images.githubusercontent.com/66015002/107529628-67aa2080-6bfe-11eb-869b-8a4150d7e5b5.png)
 > 쉽게 설명하면 예를 들어, 고객이 1순위로 가격이 낮은순 2순위로 품질이 높은순 3순위로 소매가인 상품을 보고 싶은 것이다.
 
 <pre>
@@ -209,6 +214,7 @@ JPQLQuery<Main> query = from(main).where(main.stateName.eq(nation)
   <hr/>
   
  ### 4. 카카오 지도 API 
+ ![image](https://user-images.githubusercontent.com/66015002/107529974-c2437c80-6bfe-11eb-8697-28afb1558782.png)
  
  Link: [Kakao Developer][kakao]
  
@@ -239,4 +245,6 @@ var marker = new kakao.maps.Marker({
  </code>
  </pre>
 
+### 5. 각 제품들의 월별 가격 변동 현황 사진
+![image](https://user-images.githubusercontent.com/66015002/107530150-ee5efd80-6bfe-11eb-995b-74569406c32b.png)
  
