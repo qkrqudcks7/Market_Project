@@ -16,7 +16,7 @@
 전국의 시장별 , 품목별 , 가격별 , 품질별 , 도-소매 별 검색 카테고리 제공.
 
 
-가격별, 품질별 도-소매별 우선정렬로 필터링 검색 기능 제공(3중 정렬 구현).
+가격별, 품질별 도-소매별 우선정렬로 필터링 검색 기능 제공
 
 
 카카오 지도 api를 이용한 위치 정보 제공
@@ -25,15 +25,15 @@
 1년 단위의 월별 가격 변동 사항 제공, (평균가 , 상한가 , 하한가)
 <hr/>
 
-##  html / css/ js
+##  front
 
 
-> Thymeleaf 템플릿 엔진 , css , js 사용
+> Thymeleaf 템플릿
 
 
 
 
-## Spring boot , Spring Data JPA , Query DSL , Postgresql
+## back: Spring boot , Spring Data JPA , Query DSL , Postgresql
 
 ### 1. postgresql에 xlsx 파일 저장
 > 빅데이터 엑셀 파일에 결측치를 제거하고 정제하는 과정을 가짐. 저장할 때 csv파일로 바꿔 저장함. db에 엑셀 연동 저장방식 중, csv 저장 방식을 사용하기 위함.
